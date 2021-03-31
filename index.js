@@ -2,13 +2,17 @@ var express = require('express');
 var app = express();
 
 app.get('/',c_inicio);
-app.get('/saludo',c_saludo);
+app.get('/clientes',c_clientes);
+app.get('/productos',c_productos);
 
 function  c_inicio(req,res) {
-    res.send('<h1>First program</h1>')
+    res.send('<h1>Main Page</h1>')
 }
-function  c_saludo(req,res) {
-    res.send('<h1>Hello Express From Yeridi</h1>')
+function c_clientes(req,res){
+    res.send('<ul><li>Juan Carlos</li><li>Bodoque</li><li>Tulio Triviño</li></ul>')
+}
+function  c_productos(req,res) {
+    res.send('<ul><li>Papa</li><li>Lechuga</li><li>Tomate</li></ul>');
 }
 
 function c_server(req,res){
